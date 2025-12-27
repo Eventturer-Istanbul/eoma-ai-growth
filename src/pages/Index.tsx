@@ -28,6 +28,7 @@ const Index = () => {
             "Competitor monitoring & benchmarking"
           ]}
           icon={<DataIngestionIcon />}
+          accentColor="teal"
         />
 
         <LayerSection
@@ -42,6 +43,7 @@ const Index = () => {
             "24/7 intelligent monitoring"
           ]}
           icon={<AIOptimizeIcon />}
+          accentColor="coral"
           isReversed
         />
 
@@ -57,6 +59,7 @@ const Index = () => {
             "One-click campaign launches"
           ]}
           icon={<ExecutionIcon />}
+          accentColor="lavender"
         />
       </div>
 
