@@ -60,6 +60,14 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Colorful matte palette
+        teal: "hsl(var(--color-teal))",
+        coral: "hsl(var(--color-coral))",
+        lavender: "hsl(var(--color-lavender))",
+        mint: "hsl(var(--color-mint))",
+        peach: "hsl(var(--color-peach))",
+        sky: "hsl(var(--color-sky))",
+        rose: "hsl(var(--color-rose))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -87,13 +95,13 @@ export default {
           "0%": { opacity: "0", transform: "scale(0.95)" },
           "100%": { opacity: "1", transform: "scale(1)" },
         },
-        "pulse-glow": {
-          "0%, 100%": { opacity: "0.5" },
-          "50%": { opacity: "1" },
-        },
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
+        },
+        "draw-line": {
+          "0%": { strokeDashoffset: "100" },
+          "100%": { strokeDashoffset: "0" },
         },
       },
       animation: {
@@ -102,8 +110,8 @@ export default {
         "fade-in": "fade-in 0.6s ease-out forwards",
         "fade-in-up": "fade-in-up 0.8s ease-out forwards",
         "scale-in": "scale-in 0.5s ease-out forwards",
-        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
         "float": "float 6s ease-in-out infinite",
+        "draw-line": "draw-line 2s ease-out forwards",
       },
     },
   },

@@ -24,7 +24,6 @@ const WaitlistForm = () => {
       return;
     }
 
-    // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       toast({
@@ -36,8 +35,6 @@ const WaitlistForm = () => {
     }
 
     setIsSubmitting(true);
-    
-    // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     toast({
@@ -50,16 +47,29 @@ const WaitlistForm = () => {
   };
 
   return (
-    <section ref={ref} id="waitlist" className="py-24 md:py-32 px-6">
-      <div className="max-w-3xl mx-auto text-center">
+    <section ref={ref} id="waitlist" className="relative py-24 md:py-32 px-6 overflow-hidden">
+      {/* Decorative colorful elements */}
+      <div className="absolute top-1/4 left-[10%] w-20 h-20 rounded-full line-teal opacity-10 blur-2xl" />
+      <div className="absolute bottom-1/4 right-[10%] w-24 h-24 rounded-full line-coral opacity-10 blur-2xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full line-lavender opacity-5 blur-3xl" />
+      
+      <div className="max-w-3xl mx-auto text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
             Ready to transform your marketing?
           </h2>
+          
+          {/* Colorful underline */}
+          <div className="h-1 w-24 mx-auto mb-6 rounded-full overflow-hidden flex">
+            <div className="flex-1 line-coral" />
+            <div className="flex-1 line-peach" />
+            <div className="flex-1 line-rose" />
+          </div>
+          
           <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
             Join the waitlist and be among the first to experience the future of AI-powered marketing.
           </p>

@@ -7,6 +7,7 @@ interface LayerSectionProps {
   description: string;
   features: string[];
   icon: ReactNode;
+  accentColor: string;
   isReversed?: boolean;
 }
 
@@ -16,13 +17,28 @@ const LayerSection = ({
   description, 
   features, 
   icon,
+  accentColor,
   isReversed = false 
 }: LayerSectionProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const colorClasses: Record<string, { dot: string; text: string; line: string }> = {
+    teal: { dot: "line-teal", text: "text-teal", line: "line-teal" },
+    coral: { dot: "line-coral", text: "text-coral", line: "line-coral" },
+    lavender: { dot: "line-lavender", text: "text-lavender", line: "line-lavender" },
+    mint: { dot: "line-mint", text: "text-mint", line: "line-mint" },
+    sky: { dot: "line-sky", text: "text-sky", line: "line-sky" },
+    rose: { dot: "line-rose", text: "text-rose", line: "line-rose" },
+  };
+
+  const colors = colorClasses[accentColor] || colorClasses.teal;
+
   return (
-    <section ref={ref} className="py-24 md:py-32 px-6">
+    <section ref={ref} className="relative py-24 md:py-32 px-6 overflow-hidden">
+      {/* Decorative line */}
+      <div className={`absolute top-1/2 ${isReversed ? 'right-0' : 'left-0'} w-1/3 h-[1px] ${colors.line} opacity-20`} />
+      
       <div className="max-w-6xl mx-auto">
         <div className={`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-20`}>
           {/* Content */}
@@ -32,12 +48,14 @@ const LayerSection = ({
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <span className="text-primary font-medium text-sm tracking-wider uppercase mb-4 block">
+              <span className={`${colors.text} font-medium text-sm tracking-wider uppercase mb-4 block`}>
                 Layer {layerNumber}
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-foreground">
                 {title}
               </h2>
+              {/* Colorful underline */}
+              <div className={`h-1 w-16 ${colors.line} rounded-full mb-6`} />
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 {description}
               </p>
@@ -50,7 +68,7 @@ const LayerSection = ({
                     transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                     className="flex items-center gap-3 text-muted-foreground"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                    <span className={`w-2 h-2 rounded-full ${colors.dot} flex-shrink-0`} />
                     {feature}
                   </motion.li>
                 ))}
@@ -65,12 +83,9 @@ const LayerSection = ({
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="flex-1 w-full"
           >
-            <div className="relative">
-              <div className="absolute inset-0 bg-primary/10 blur-3xl rounded-full" />
-              <div className="relative bg-card border border-border rounded-2xl p-8 md:p-12 card-glow">
-                <div className="flex items-center justify-center text-primary">
-                  {icon}
-                </div>
+            <div className="relative bg-card border border-border rounded-2xl p-8 md:p-12 shadow-card">
+              <div className="flex items-center justify-center">
+                {icon}
               </div>
             </div>
           </motion.div>
