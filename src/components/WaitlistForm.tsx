@@ -60,18 +60,20 @@ const WaitlistForm = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-            Ready to transform your marketing?
+            Ready to Replace Your Marketing Stack?
           </h2>
-          
+
           {/* Colorful underline */}
           <div className="h-1 w-24 mx-auto mb-6 rounded-full overflow-hidden flex">
+            <div className="flex-1 line-teal" />
             <div className="flex-1 line-coral" />
-            <div className="flex-1 line-peach" />
-            <div className="flex-1 line-rose" />
+            <div className="flex-1 line-lavender" />
           </div>
-          
+
           <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-            Join the waitlist and be among the first to experience the future of AI-powered marketing.
+            <strong className="text-foreground">Data + Context + Execution</strong>—all managed by our AI agency.
+            <br />
+            Be among the first to experience the future of marketing.
           </p>
           
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
