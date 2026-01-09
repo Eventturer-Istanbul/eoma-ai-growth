@@ -99,7 +99,7 @@ const ParadigmSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <div className="bg-background border-2 border-teal/30 rounded-2xl p-6 md:p-8 relative overflow-hidden">
+            <div className="bg-background border-2 border-teal/30 rounded-2xl p-6 md:p-8 relative">
               <div className="absolute inset-0 bg-gradient-to-br from-teal/5 to-lavender/5" />
               <div className="absolute -top-3 left-6 z-10">
                 <span className="px-3 py-1.5 line-teal text-white text-xs font-medium rounded-full">
