@@ -101,8 +101,8 @@ const ParadigmSection = () => {
           >
             <div className="bg-background border-2 border-teal/30 rounded-2xl p-6 md:p-8 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-teal/5 to-lavender/5" />
-              <div className="absolute -top-3 left-6">
-                <span className="px-3 py-1 line-teal text-white text-xs font-medium rounded-full">
+              <div className="absolute -top-3 left-6 z-10">
+                <span className="px-3 py-1.5 line-teal text-white text-xs font-medium rounded-full">
                   NEW WAY
                 </span>
               </div>

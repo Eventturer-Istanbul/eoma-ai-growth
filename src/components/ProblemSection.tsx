@@ -96,20 +96,6 @@ const ProblemSection = () => {
             </p>
           </motion.div>
 
-          {/* Arrow */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="hidden md:flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-          >
-            <div className="w-16 h-16 rounded-full bg-card border border-border flex items-center justify-center shadow-card">
-              <svg className="w-6 h-6 text-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </div>
-          </motion.div>
-
           {/* Right: EOMA unified */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
