@@ -138,7 +138,7 @@ const UseCasesSection = () => {
 
                     {/* Action */}
                     <div>
-                      <span className={`text-xs font-medium ${colors.text} uppercase tracking-wider`}>
+                      <span className={`text-sm font-semibold ${colors.text} uppercase tracking-wider`}>
                         EOMA automatically
                       </span>
                       <p className="text-muted-foreground mt-1 leading-relaxed">
