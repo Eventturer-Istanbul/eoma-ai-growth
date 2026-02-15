@@ -89,8 +89,8 @@ const HeroSection = ({ onJoinWaitlist }: HeroSectionProps) => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          EOMA is a <strong className="text-foreground">Context-Aware AI Agency</strong> that automates everything
-          from data collection to final execution—all from one intelligent platform.
+          EOMA is a <strong className="text-foreground">Context-Aware AI Agency</strong> that automates your entire
+          marketing workflow—from data collection to final execution—all from one intelligent platform.
         </motion.p>
 
         {/* CTA Buttons */}
