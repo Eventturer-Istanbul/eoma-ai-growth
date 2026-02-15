@@ -91,6 +91,7 @@ const HeroSection = ({ onJoinWaitlist }: HeroSectionProps) => {
         >
           EOMA is a <strong className="text-foreground">Context-Aware AI Agency</strong> that automates your entire
           marketing workflow—from data collection to final execution—all from one intelligent platform.
+          AI moves with precision. The human layer keeps the work relevant, strategic, and aligned with your brand.
         </motion.p>
 
         {/* CTA Buttons */}

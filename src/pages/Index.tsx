@@ -31,13 +31,14 @@ const Index = () => {
         <LayerSection
           layerNumber="01"
           title="Data"
-          description="All your marketing data unified in one place. Analytics, social metrics, SEO rankings, ad performance—automatically collected and correlated."
+          description="All your marketing data unified in one place. Analytics, social metrics, SEO rankings, ad performance—automatically collected and correlated. We also monitor competitor brands and adjacent industries so you always know what's moving around you."
           features={[
             "Google Analytics 4 & Search Console",
             "Meta, TikTok, LinkedIn, Twitter insights",
-            "Competitor monitoring & benchmarking",
+            "Competitor & reference brand monitoring",
+            "Monthly intelligence reports & on-demand listening",
             "Real-time performance dashboards",
-            "Historical trend analysis"
+            "Pattern detection across campaigns and industries"
           ]}
           icon={<DataIngestionIcon />}
           accentColor="teal"
@@ -46,13 +47,14 @@ const Index = () => {
         <LayerSection
           layerNumber="02"
           title="Context"
-          description="In-context learning that understands your brand. EOMA learns your voice, knows your audience, and remembers your goals—no prompt engineering required."
+          description="In-context learning that understands your brand. EOMA learns your voice, knows your audience, and remembers your goals—no prompt engineering required. AI processes the data; our team interprets the context and guides every strategic decision."
           features={[
             "Brand voice & style learning",
             "Audience persona understanding",
             "Campaign history & performance memory",
             "Industry-specific insights",
-            "Contextual recommendations"
+            "Strategic interpretation layered onto AI analysis",
+            "Quarterly grand strategy & monthly roadmaps"
           ]}
           icon={<AIOptimizeIcon />}
           accentColor="coral"
@@ -62,13 +64,14 @@ const Index = () => {
         <LayerSection
           layerNumber="03"
           title="Execution"
-          description="From insight to action in seconds. EOMA doesn't just analyze—it executes. Content creation, ad optimization, social publishing, and more."
+          description="From insight to action—with human oversight at every step. EOMA handles content production, ad optimization, and publishing across platforms. AI scales the work; creative decisions stay intentionally human."
           features={[
-            "AI content generation & publishing",
-            "Automated ad campaign management",
-            "Social media scheduling & posting",
-            "Task creation in Notion & other tools",
-            "Real-time campaign adjustments"
+            "Platform-native content for Instagram, YouTube, LinkedIn, X & TikTok",
+            "AI-assisted blog writing & SEO content",
+            "Paid media management across Meta & Google Ads",
+            "Continuous performance monitoring & budget optimization",
+            "Adaptive production volume based on strategic focus",
+            "Every output reviewed with brand sensitivity in mind"
           ]}
           icon={<ExecutionIcon />}
           accentColor="lavender"

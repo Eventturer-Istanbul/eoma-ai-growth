@@ -143,9 +143,9 @@ const ParadigmSection = () => {
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             You won't buy an Instagram tool or an SEO dashboard.
             <br className="hidden md:block" />
-            You'll buy{" "}
+            You'll work with{" "}
             <strong className="text-foreground">Marketing in a Box</strong>—a complete AI agency
-            that handles everything from data to execution.
+            that handles everything from data to execution, with human judgment at the center of every decision.
           </p>
         </motion.div>
       </div>

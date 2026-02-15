@@ -114,7 +114,7 @@ const ProblemSection = () => {
                   ))}
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">EOMA</h3>
-                <p className="text-muted-foreground">All-in-one. Context-aware.</p>
+                <p className="text-muted-foreground">All-in-one. Context-aware. Human-guided.</p>
               </div>
             </div>
             <p className="text-center text-teal mt-6 text-sm font-medium">

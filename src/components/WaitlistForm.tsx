@@ -71,7 +71,7 @@ const WaitlistForm = () => {
           </div>
 
           <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-            <strong className="text-foreground">Data + Context + Execution</strong>—all managed by our AI agency.
+            <strong className="text-foreground">Data + Context + Execution</strong>—AI precision, guided by human strategy.
             <br />
             Be among the first to experience the future of marketing.
           </p>

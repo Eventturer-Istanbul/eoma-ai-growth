@@ -8,7 +8,7 @@ const UseCasesSection = () => {
   const useCases = [
     {
       trigger: "You book a 70s rock band for your venue",
-      action: "EOMA automatically shifts your Meta Ads targeting to Gen Z nostalgia audiences, updates your Instagram content calendar, and adjusts your email campaigns—all before you finish your coffee.",
+      action: "EOMA shifts your Meta Ads targeting to Gen Z nostalgia audiences, updates your Instagram content calendar, and adjusts your email campaigns—ready for your review before you finish your coffee.",
       color: "teal",
       icon: (
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -28,7 +28,7 @@ const UseCasesSection = () => {
     },
     {
       trigger: "You run a brand collaboration",
-      action: "EOMA creates tasks in Notion for each deliverable, sets up tracking links, drafts influencer outreach emails, and schedules reminder notifications—your whole workflow, automated.",
+      action: "EOMA creates tasks in Notion for each deliverable, sets up tracking links, drafts influencer outreach emails, and schedules reminder notifications—your whole workflow, structured and ready for your sign-off.",
       color: "lavender",
       icon: (
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -92,7 +92,7 @@ const UseCasesSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg md:text-xl text-muted-foreground text-center max-w-2xl mx-auto mb-16 leading-relaxed"
         >
-          One trigger. Complete execution. No manual work.
+          One trigger. AI handles the heavy lifting. You stay in control.
         </motion.p>
 
         {/* Use cases */}
