@@ -13,12 +13,10 @@ export interface BlogPost {
 
 // Import all posts
 import { post as eraOfHorizontals } from "./era-of-horizontals";
-import { post as aiAdoptionGap } from "./ai-adoption-gap";
 
 // Export ordered by date (newest first)
 export const blogPosts: BlogPost[] = [
   eraOfHorizontals,
-  aiAdoptionGap,
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export const getPostBySlug = (slug: string): BlogPost | undefined =>
