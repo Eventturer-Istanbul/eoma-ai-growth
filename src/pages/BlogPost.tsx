@@ -66,7 +66,7 @@ const BlogPost = () => {
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground mb-4">
+            <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground mb-4">
               {post.title}
             </h1>
 
@@ -74,21 +74,24 @@ const BlogPost = () => {
             <p className="text-lg text-muted-foreground leading-relaxed">
               {post.description}
             </p>
+
+            {/* Author */}
+            <div className="mt-6 pt-6 border-t border-border">
+              <span className="text-sm text-muted-foreground">
+                By <span className="font-medium text-foreground">{post.author}</span>
+              </span>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Article body */}
-      <article className="max-w-3xl mx-auto px-6 py-12">
+      {/* Article Body */}
+      <section className="max-w-3xl mx-auto px-6 py-12">
         <div
-          className="prose prose-lg prose-neutral max-w-none
-                     prose-headings:font-semibold prose-headings:tracking-tight
-                     prose-p:leading-relaxed prose-p:text-gray-700
-                     prose-strong:text-gray-900
-                     prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4"
+          className="prose prose-lg prose-neutral max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-p:leading-relaxed prose-p:text-gray-700 prose-strong:text-gray-900 prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
-      </article>
+      </section>
 
       <Footer />
     </main>
