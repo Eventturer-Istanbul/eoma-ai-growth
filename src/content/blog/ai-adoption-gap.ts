@@ -66,5 +66,42 @@ export const post: BlogPost = {
 <p>The competitive divide in marketing AI integration isn't about who has the best tools. It's about who has the know-how, or the right partner, to make those tools work together. That AI adoption gap, left unaddressed, doesn't close on its own.</p>
 
 <p>EOMA is here to close it.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<details>
+<summary>What is the AI adoption gap in marketing?</summary>
+<p>The AI adoption gap in marketing refers to the stark divide between the pressure marketers feel to use AI and their actual ability to embed it into daily operations. According to Supermetrics 2026, 80% of marketers feel that pressure, yet only 6% have fully integrated AI into their workflows. The gap isn't about access to tools. It's about the know-how to connect, configure, and operate those tools together.</p>
+</details>
+
+<details>
+<summary>Why aren't marketers using AI even when they have access to the tools?</summary>
+<p>Because having a tool and knowing how to wire it into your actual workflow are completely different things. Deloitte's 2026 research found that insufficient worker skills, not budget or tool availability, is the single biggest barrier to AI adoption. Around 43% of marketers say they don't know how to extract value from AI tools they already have access to. The tools exist. The integration knowledge doesn't.</p>
+</details>
+
+<details>
+<summary>What is agentic AI and why aren't agencies using it?</summary>
+<p>Agentic AI refers to AI systems that can take autonomous, multi-step actions. Publishing content, responding to data triggers, running campaigns without manual input at every stage. It's the next level beyond chatbots or copy assistants. Despite the potential, 54% of agencies haven't started with agentic AI at all. The primary barriers are API complexity and integration trust, which is exactly the know-how problem EOMA was built to solve.</p>
+</details>
+
+<details>
+<summary>What results do AI-integrated marketing campaigns actually produce?</summary>
+<p>The numbers are significant when AI is properly embedded. Research from Loopex 2026 shows AI-driven campaigns deliver 22% better ROI, 32% more conversions, and 29% lower customer acquisition costs compared to non-AI campaigns. The catch: those results require full integration, not just using an AI writing tool in isolation.</p>
+</details>
+
+<details>
+<summary>Why do most companies fail to move AI projects out of pilot mode?</summary>
+<p>Fewer than 10% of vertical AI use cases make it out of pilot mode, and fragmentation is a core reason. Most companies build AI experiments in silos: one team testing one tool, another team using something incompatible. Without centralized infrastructure and the technical knowledge to connect systems, pilots stay pilots. There's no path from experiment to production.</p>
+</details>
+
+<details>
+<summary>What does marketing automation centralization mean in practice?</summary>
+<p>Centralization means building one connected system where your AI tools talk to each other. Your design pipeline feeds your content pipeline, which feeds your social publishing, which feeds your analytics. Instead of five tools running independently, you have one workflow where data and output move automatically. That's what separates brands getting measurable ROI from AI versus brands still paying for tools they can't fully use.</p>
+</details>
+
+<details>
+<summary>What does EOMA actually do?</summary>
+<p>EOMA builds and operates marketing-ready AI systems based on the same infrastructure we developed running our own agency. We connect the tools, including Figma MCP to Claude, social platform developer APIs, and FAL AI for visual content generation, into unified workflows that brands and agencies can actually use without needing a technical team to maintain them. We close the know-how gap so you can focus on strategy, not plumbing.</p>
+</details>
   `,
 };
