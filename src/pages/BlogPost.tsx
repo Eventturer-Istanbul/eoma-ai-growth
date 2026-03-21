@@ -66,57 +66,29 @@ const BlogPost = () => {
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+            <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground mb-4">
               {post.title}
             </h1>
 
             {/* Description */}
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               {post.description}
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Content */}
-      <section className="py-12 px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="max-w-3xl mx-auto"
-        >
-          <article
-            className="prose prose-lg max-w-none
-              prose-headings:font-bold prose-headings:text-foreground
-              prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
-              prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
-              prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-5
-              prose-li:text-muted-foreground
-              prose-strong:text-foreground prose-strong:font-semibold
-              prose-a:text-primary prose-a:underline hover:prose-a:text-primary/80
-              prose-ul:my-4 prose-ul:pl-6
-              prose-ol:my-4 prose-ol:pl-6"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
-
-          {/* Tags */}
-          {post.tags.length > 0 && (
-            <div className="mt-12 pt-8 border-t border-border">
-              <div className="flex flex-wrap gap-2">
-                {post.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
-        </motion.div>
-      </section>
+      {/* Article body */}
+      <article className="max-w-3xl mx-auto px-6 py-12">
+        <div
+          className="prose prose-lg prose-neutral max-w-none
+                     prose-headings:font-semibold prose-headings:tracking-tight
+                     prose-p:leading-relaxed prose-p:text-gray-700
+                     prose-strong:text-gray-900
+                     prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+      </article>
 
       <Footer />
     </main>
