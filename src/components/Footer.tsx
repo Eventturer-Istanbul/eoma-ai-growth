@@ -8,7 +8,7 @@ const Footer = () => {
           <img src={eomaLogo} alt="EOMA" className="w-8 h-8" />
           <span className="font-semibold text-lg text-foreground">EOMA</span>
         </div>
-        
+
         {/* Colorful divider */}
         <div className="hidden md:flex h-1 w-24 rounded-full overflow-hidden">
           <div className="flex-1 line-teal" />
@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="flex-1 line-lavender" />
           <div className="flex-1 line-mint" />
         </div>
-        
+
         <p className="text-sm text-muted-foreground">
           © {new Date().getFullYear()} EOMA. All rights reserved.
         </p>

@@ -59,10 +59,7 @@ const BlogSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <Link
-                to={`/blog/${post.slug}`}
-                className="group block h-full"
-              >
+              <Link to={`/blog/${post.slug}`} className="group block h-full">
                 <article className="h-full flex flex-col rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:shadow-[var(--shadow-card)] hover:-translate-y-1">
                   {/* Color accent bar */}
                   <div

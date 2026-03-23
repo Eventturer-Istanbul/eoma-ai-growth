@@ -3,11 +3,20 @@ import { BlogPost } from "./index";
 export const post: BlogPost = {
   slug: "ai-adoption-gap",
   title: "The Real AI Barrier in Marketing Has Nothing to Do With Tools",
-  description: "Only 6% of marketers have fully embedded AI into their workflows. The barrier isn't access to tools. It's the integration know-how that connects them. And that gap is widening fast.",
+  description:
+    "Only 6% of marketers have fully embedded AI into their workflows. The barrier isn't access to tools. It's the integration know-how that connects them. And that gap is widening fast.",
   date: "2026-03-20",
   readTime: "6 min read",
   category: "Strategy",
-  tags: ["AI adoption", "marketing automation", "know-how gap", "AI integration", "martech", "AI skills gap", "marketing operations"],
+  tags: [
+    "AI adoption",
+    "marketing automation",
+    "know-how gap",
+    "AI integration",
+    "martech",
+    "AI skills gap",
+    "marketing operations",
+  ],
   author: "EOMA",
   coverColor: "coral",
   content: `

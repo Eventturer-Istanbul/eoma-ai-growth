@@ -14,7 +14,7 @@ const WaitlistForm = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    
+
     if (!email.trim()) {
       toast({
         title: "Email required",
@@ -35,24 +35,28 @@ const WaitlistForm = () => {
     }
 
     setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     toast({
       title: "You're on the list!",
       description: "We'll notify you when EOMA launches.",
     });
-    
+
     setEmail("");
     setIsSubmitting(false);
   };
 
   return (
-    <section ref={ref} id="waitlist" className="relative py-24 md:py-32 px-6 overflow-hidden">
+    <section
+      ref={ref}
+      id="waitlist"
+      className="relative py-24 md:py-32 px-6 overflow-hidden"
+    >
       {/* Decorative colorful elements */}
       <div className="absolute top-1/4 left-[10%] w-20 h-20 rounded-full line-teal opacity-10 blur-2xl" />
       <div className="absolute bottom-1/4 right-[10%] w-24 h-24 rounded-full line-coral opacity-10 blur-2xl" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full line-lavender opacity-5 blur-3xl" />
-      
+
       <div className="max-w-3xl mx-auto text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -71,12 +75,18 @@ const WaitlistForm = () => {
           </div>
 
           <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-            <strong className="text-foreground">Data + Context + Execution</strong>—AI precision, guided by human strategy.
+            <strong className="text-foreground">
+              Data + Context + Execution
+            </strong>
+            —AI precision, guided by human strategy.
             <br />
             Be among the first to experience the future of marketing.
           </p>
-          
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+          >
             <Input
               type="email"
               placeholder="Enter your email"
@@ -85,16 +95,16 @@ const WaitlistForm = () => {
               className="flex-1"
               disabled={isSubmitting}
             />
-            <Button 
-              type="submit" 
-              variant="hero" 
+            <Button
+              type="submit"
+              variant="hero"
               size="lg"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Joining..." : "Join Waitlist"}
             </Button>
           </form>
-          
+
           <p className="text-sm text-muted-foreground mt-4">
             No spam, ever. Unsubscribe anytime.
           </p>

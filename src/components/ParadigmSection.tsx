@@ -6,7 +6,10 @@ const ParadigmSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="relative py-24 md:py-32 px-6 overflow-hidden bg-card">
+    <section
+      ref={ref}
+      className="relative py-24 md:py-32 px-6 overflow-hidden bg-card"
+    >
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-[1px] line-lavender opacity-20" />
       <div className="absolute bottom-0 left-0 w-full h-[1px] line-lavender opacity-20" />
@@ -34,11 +37,14 @@ const ParadigmSection = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-foreground leading-tight"
         >
-          From <span className="text-muted-foreground line-through">Tools</span> to{" "}
-          <span className="text-teal">Agency</span>.
+          From <span className="text-muted-foreground line-through">Tools</span>{" "}
+          to <span className="text-teal">Agency</span>.
           <br className="hidden md:block" />
-          From <span className="text-muted-foreground line-through">Verticals</span> to{" "}
-          <span className="text-gradient">Horizontals</span>.
+          From{" "}
+          <span className="text-muted-foreground line-through">
+            Verticals
+          </span>{" "}
+          to <span className="text-gradient">Horizontals</span>.
         </motion.h2>
 
         {/* Colorful underline */}
@@ -144,8 +150,9 @@ const ParadigmSection = () => {
             You won't buy an Instagram tool or an SEO dashboard.
             <br className="hidden md:block" />
             You'll work with{" "}
-            <strong className="text-foreground">Marketing in a Box</strong>—a complete AI agency
-            that handles everything from data to execution, with human judgment at the center of every decision.
+            <strong className="text-foreground">Marketing in a Box</strong>—a
+            complete AI agency that handles everything from data to execution,
+            with human judgment at the center of every decision.
           </p>
         </motion.div>
       </div>

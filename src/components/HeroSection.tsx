@@ -63,8 +63,7 @@ const HeroSection = ({ onJoinWaitlist }: HeroSectionProps) => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-foreground leading-tight"
         >
-          The Era of Tools is Over.{" "}
-          <br className="hidden md:block" />
+          The Era of Tools is Over. <br className="hidden md:block" />
           Welcome to the Era of{" "}
           <span className="text-gradient">Horizontals</span>.
         </motion.h1>
@@ -89,9 +88,12 @@ const HeroSection = ({ onJoinWaitlist }: HeroSectionProps) => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          EOMA is a <strong className="text-foreground">Context-Aware AI Agency</strong> that automates your entire
-          marketing workflow—from data collection to final execution—all from one intelligent platform.
-          AI moves with precision. The human layer keeps the work relevant, strategic, and aligned with your brand.
+          EOMA is a{" "}
+          <strong className="text-foreground">Context-Aware AI Agency</strong>{" "}
+          that automates your entire marketing workflow—from data collection to
+          final execution—all from one intelligent platform. AI moves with
+          precision. The human layer keeps the work relevant, strategic, and
+          aligned with your brand.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -104,19 +106,18 @@ const HeroSection = ({ onJoinWaitlist }: HeroSectionProps) => {
           <Button
             variant="hero"
             size="xl"
-            onClick={() => document.getElementById('problem')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() =>
+              document
+                .getElementById("problem")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             See How It Works
           </Button>
-          <Button
-            variant="hero-outline"
-            size="xl"
-            onClick={onJoinWaitlist}
-          >
+          <Button variant="hero-outline" size="xl" onClick={onJoinWaitlist}>
             Join the Waitlist
           </Button>
         </motion.div>
-
       </div>
     </section>
   );

@@ -63,10 +63,7 @@ const Blog = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
               >
-                <Link
-                  to={`/blog/${post.slug}`}
-                  className="group block"
-                >
+                <Link to={`/blog/${post.slug}`} className="group block">
                   <article className="flex flex-col md:flex-row gap-6 rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:shadow-[var(--shadow-card)] hover:-translate-y-0.5">
                     {/* Color accent */}
                     <div
@@ -80,14 +77,19 @@ const Blog = () => {
                       <div className="flex items-center gap-3 text-sm text-muted-foreground mb-2">
                         <span
                           className={`font-medium ${
-                            accentTextMap[post.coverColor] ||
-                            accentTextMap.teal
+                            accentTextMap[post.coverColor] || accentTextMap.teal
                           }`}
                         >
                           {post.category}
                         </span>
                         <span>·</span>
-                        <time>{new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</time>
+                        <time>
+                          {new Date(post.date).toLocaleDateString("en-US", {
+                            month: "long",
+                            day: "numeric",
+                            year: "numeric",
+                          })}
+                        </time>
                         <span>·</span>
                         <span className="flex items-center gap-1">
                           <Clock className="w-3.5 h-3.5" />

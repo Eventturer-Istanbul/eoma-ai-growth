@@ -78,7 +78,10 @@ const BlogPost = () => {
             {/* Author */}
             <div className="mt-6 pt-6 border-t border-border">
               <span className="text-sm text-muted-foreground">
-                By <span className="font-medium text-foreground">{post.author}</span>
+                By{" "}
+                <span className="font-medium text-foreground">
+                  {post.author}
+                </span>
               </span>
             </div>
           </motion.div>

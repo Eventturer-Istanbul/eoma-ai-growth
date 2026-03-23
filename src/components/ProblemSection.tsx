@@ -15,7 +15,11 @@ const ProblemSection = () => {
   ];
 
   return (
-    <section ref={ref} id="problem" className="relative py-24 md:py-32 px-6 overflow-hidden">
+    <section
+      ref={ref}
+      id="problem"
+      className="relative py-24 md:py-32 px-6 overflow-hidden"
+    >
       {/* Decorative elements */}
       <div className="absolute top-1/4 right-[5%] w-24 h-24 rounded-full line-coral opacity-5 blur-3xl" />
       <div className="absolute bottom-1/4 left-[5%] w-32 h-32 rounded-full line-lavender opacity-5 blur-3xl" />
@@ -64,8 +68,8 @@ const ProblemSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg md:text-xl text-muted-foreground text-center max-w-3xl mx-auto mb-16 leading-relaxed"
         >
-          Marketers today juggle separate logins, separate invoices, and siloed data.
-          Each tool solves one problem while creating three more.
+          Marketers today juggle separate logins, separate invoices, and siloed
+          data. Each tool solves one problem while creating three more.
         </motion.p>
 
         {/* Visual: Fragmented tools vs EOMA */}
@@ -86,8 +90,12 @@ const ProblemSection = () => {
                   transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
                   className="bg-card border border-border rounded-xl p-4 md:p-6 text-center shadow-soft"
                 >
-                  <div className={`w-3 h-3 rounded-full ${tool.color} mx-auto mb-2`} />
-                  <span className="text-sm text-muted-foreground">{tool.name}</span>
+                  <div
+                    className={`w-3 h-3 rounded-full ${tool.color} mx-auto mb-2`}
+                  />
+                  <span className="text-sm text-muted-foreground">
+                    {tool.name}
+                  </span>
                 </motion.div>
               ))}
             </div>
@@ -110,11 +118,18 @@ const ProblemSection = () => {
               <div className="relative z-10">
                 <div className="flex justify-center gap-1 mb-4">
                   {tools.map((tool) => (
-                    <div key={tool.name} className={`w-2 h-2 rounded-full ${tool.color}`} />
+                    <div
+                      key={tool.name}
+                      className={`w-2 h-2 rounded-full ${tool.color}`}
+                    />
                   ))}
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">EOMA</h3>
-                <p className="text-muted-foreground">All-in-one. Context-aware. Human-guided.</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                  EOMA
+                </h3>
+                <p className="text-muted-foreground">
+                  All-in-one. Context-aware. Human-guided.
+                </p>
               </div>
             </div>
             <p className="text-center text-teal mt-6 text-sm font-medium">

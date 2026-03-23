@@ -13,7 +13,7 @@ import ExecutionIcon from "@/components/icons/ExecutionIcon";
 
 const Index = () => {
   const scrollToWaitlist = () => {
-    document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -39,7 +39,7 @@ const Index = () => {
             "Competitor & reference brand monitoring",
             "Monthly intelligence reports & on-demand listening",
             "Real-time performance dashboards",
-            "Pattern detection across campaigns and industries"
+            "Pattern detection across campaigns and industries",
           ]}
           icon={<DataIngestionIcon />}
           accentColor="teal"
@@ -55,7 +55,7 @@ const Index = () => {
             "Competitive positioning intelligence",
             "Audience behavior pattern recognition",
             "Content gap & opportunity detection",
-            "Campaign performance attribution"
+            "Campaign performance attribution",
           ]}
           icon={<AIOptimizeIcon />}
           accentColor="lavender"
@@ -71,7 +71,7 @@ const Index = () => {
             "Campaign creation from insights",
             "Approval-based workflow: AI drafts → You approve",
             "Auto-boost high performers",
-            "The Loop: detect → optimize → learn → repeat"
+            "The Loop: detect → optimize → learn → repeat",
           ]}
           icon={<ExecutionIcon />}
           accentColor="coral"
