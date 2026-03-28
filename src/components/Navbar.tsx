@@ -34,6 +34,14 @@ export default function Navbar() {
           >
             Blog
           </Link>
+          <a
+            href="https://cal.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center whitespace-nowrap font-semibold transition-all duration-300 bg-foreground text-background rounded-lg h-9 px-5 text-sm hover:scale-[1.02] active:scale-[0.98]"
+          >
+            Get a Demo
+          </a>
         </div>
       </div>
     </nav>

@@ -4,7 +4,6 @@ import WhatWeDoSection from "@/components/WhatWeDoSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import IntegrationsSection from "@/components/IntegrationsSection";
 import BlogSection from "@/components/BlogSection";
-import WaitlistForm from "@/components/WaitlistForm";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -16,7 +15,6 @@ const Index = () => {
       <HowItWorksSection />
       <IntegrationsSection />
       <BlogSection />
-      <WaitlistForm />
       <Footer />
     </main>
   );
