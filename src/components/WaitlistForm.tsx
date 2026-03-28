@@ -1,6 +1,5 @@
-import { useState, FormEvent } from "react";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useState, FormEvent, useRef } from "react";
+import { useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
@@ -9,7 +8,7 @@ const WaitlistForm = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const inView = useInView(ref, { once: true, margin: "-80px" });
   const { toast } = useToast();
 
   const handleSubmit = async (e: FormEvent) => {
@@ -47,68 +46,53 @@ const WaitlistForm = () => {
   };
 
   return (
-    <section
-      ref={ref}
-      id="waitlist"
-      className="relative py-24 md:py-32 px-6 overflow-hidden"
-    >
-      {/* Decorative colorful elements */}
-      <div className="absolute top-1/4 left-[10%] w-20 h-20 rounded-full line-teal opacity-10 blur-2xl" />
-      <div className="absolute bottom-1/4 right-[10%] w-24 h-24 rounded-full line-coral opacity-10 blur-2xl" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full line-lavender opacity-5 blur-3xl" />
+    <section ref={ref} className="px-4 py-20 md:py-28 bg-card">
+      <div
+        className="mx-auto max-w-2xl text-center"
+        style={{
+          opacity: inView ? 1 : 0,
+          transform: inView ? "translateY(0)" : "translateY(24px)",
+          transition: "opacity 0.5s ease, transform 0.5s ease",
+        }}
+      >
+        <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tight md:text-4xl text-foreground">
+          Ready to see what your marketing data is telling you?
+        </h2>
+        <div className="mx-auto mb-6 flex h-1 w-20 gap-0.5 overflow-hidden rounded-full">
+          <span className="flex-1 line-teal" />
+          <span className="flex-1 line-coral" />
+          <span className="flex-1 line-lavender" />
+        </div>
+        <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
+          Connect your brand, let the AI agent do the heavy lifting, and get
+          actionable outputs — not dashboards you'll never check.
+        </p>
 
-      <div className="max-w-3xl mx-auto text-center relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-            Ready to Replace Your Marketing Stack?
-          </h2>
-
-          {/* Colorful underline */}
-          <div className="h-1 w-24 mx-auto mb-6 rounded-full overflow-hidden flex">
-            <div className="flex-1 line-teal" />
-            <div className="flex-1 line-coral" />
-            <div className="flex-1 line-lavender" />
-          </div>
-
-          <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-            <strong className="text-foreground">
-              Data + Context + Execution
-            </strong>
-            —AI precision, guided by human strategy.
-            <br />
-            Be among the first to experience the future of marketing.
-          </p>
-
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+          <Input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="flex-1"
+            disabled={isSubmitting}
+          />
+          <Button
+            type="submit"
+            variant="hero"
+            size="lg"
+            disabled={isSubmitting}
           >
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="flex-1"
-              disabled={isSubmitting}
-            />
-            <Button
-              type="submit"
-              variant="hero"
-              size="lg"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? "Joining..." : "Join Waitlist"}
-            </Button>
-          </form>
+            {isSubmitting ? "Joining..." : "Join Waitlist"}
+          </Button>
+        </form>
 
-          <p className="text-sm text-muted-foreground mt-4">
-            No spam, ever. Unsubscribe anytime.
-          </p>
-        </motion.div>
+        <p className="text-sm text-muted-foreground mt-4">
+          No spam, ever. Unsubscribe anytime.
+        </p>
       </div>
     </section>
   );
