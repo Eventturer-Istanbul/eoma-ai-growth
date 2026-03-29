@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import eomaLogo from "@/assets/eoma-logo.png";
+import eomaLogo from "@/assets/eoma-logo.svg";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="mx-auto max-w-6xl px-6 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <img src={eomaLogo} alt="EOMA" className="h-7 w-7" />
+            <img src={eomaLogo} alt="EOMA" className="h-7 w-auto" />
             <span className="font-semibold text-sm text-foreground">EOMA</span>
           </div>
 

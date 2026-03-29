@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import eomaLogo from "@/assets/eoma-logo.png";
+import eomaLogo from "@/assets/eoma-logo.svg";
 import DemoModal from "@/components/DemoModal";
 
 export default function Navbar() {
@@ -26,7 +26,7 @@ export default function Navbar() {
       >
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
           <a href="#" className="flex items-center gap-2">
-            <img src={eomaLogo} alt="EOMA" className="h-7 w-7" />
+            <img src={eomaLogo} alt="EOMA" className="h-7 w-auto" />
             <span className="text-base font-semibold text-foreground">EOMA</span>
           </a>
 
